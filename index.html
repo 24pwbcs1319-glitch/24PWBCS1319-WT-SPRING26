@@ -1,24 +1,91 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Landing Page</title>
-  </head>
-  <body>
-    <p>
-      Welcome to the Web Lab! This is your landing page where you can access all
-      the lab assignments for the course. Click on the links below to navigate
-      to Lab 01 and Lab 02.
-    </p>
-    <h3>Lab Projects</h3>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Landing Page</title>
 
-    <p>Click the links below to access the labs:</p>
+<style>
 
-    <ul>
-      <li><a href="Lab01/index.html" target="_blank">Lab 1</a></li>
-      <li><a href="Lab02/index.html" target="_blank">Lab 2</a></li>
-      <li><a href="Lab03/index.html" target="_blank">Lab 3</a></li>
-    </ul>
-  </body>
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(135deg,#667eea,#764ba2);
+}
+
+.container{
+    background:white;
+    padding:40px;
+    border-radius:12px;
+    width:420px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
+
+h3{
+    margin-top:20px;
+    color:#333;
+}
+
+p{
+    color:#555;
+    line-height:1.6;
+}
+
+ul{
+    list-style:none;
+    padding:0;
+}
+
+ul li{
+    margin:12px 0;
+}
+
+ul li a{
+    display:block;
+    text-decoration:none;
+    padding:12px;
+    border-radius:8px;
+    background: linear-gradient(90deg,#4facfe,#00f2fe);
+    color:white;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+ul li a:hover{
+    transform:translateY(-3px);
+    box-shadow:0 6px 15px rgba(0,0,0,0.2);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<p>
+Welcome to the Web Lab! This is your landing page where you can access all
+the lab assignments for the course. Click on the links below to navigate
+to Lab 01 and Lab 02.
+</p>
+
+<h3>Lab Projects</h3>
+
+<p>Click the links below to access the labs:</p>
+
+<ul>
+<li><a href="Lab01/index.html" target="_blank">Lab 1</a></li>
+<li><a href="Lab02/index.html" target="_blank">Lab 2</a></li>
+<li><a href="Lab03/index.html" target="_blank">Lab 3</a></li>
+</ul>
+
+</div>
+
+</body>
 </html>
