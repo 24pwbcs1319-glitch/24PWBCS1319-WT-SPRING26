@@ -127,3 +127,197 @@ body {
     height: auto;
   }
 }
+
+.schedule-page {
+  background: #f5f6fb;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem 3rem;
+}
+
+.schedule-shell {
+  width: min(1000px, 100%);
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #dfe3ee;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.schedule-header {
+  text-align: center;
+}
+
+.schedule-header h1 {
+  margin: 0.25rem 0;
+  font-size: clamp(1.8rem, 2.4vw, 2.3rem);
+  color: #0f172a;
+}
+
+.schedule-header .subhead {
+  margin: 0;
+  color: #4b5563;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.schedule-table-wrapper {
+  overflow-x: auto;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.schedule-table th,
+.schedule-table td {
+  padding: 0.75rem;
+  border: 1px solid #dfe3ee;
+  text-align: left;
+}
+
+.schedule-table th {
+  background: #f1f3f7;
+  color: #1f2937;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+}
+
+.schedule-table tbody tr:nth-child(even) td {
+  background: #fafbff;
+}
+
+.schedule-note {
+  padding: 0.85rem 1rem;
+  border-left: 4px solid #111827;
+  background: #f4f5f9;
+  color: #0f172a;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.home-link {
+  align-self: center;
+  background: #1f2937;
+  color: white;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  .schedule-shell {
+    padding: 1.25rem;
+  }
+
+  .schedule-table th,
+  .schedule-table td {
+    font-size: 0.8rem;
+  }
+}
+
+.home-page {
+  background: #f5f7ff;
+}
+
+.home-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem 3rem;
+  gap: 1.5rem;
+}
+
+.home-header {
+  text-align: center;
+  background: #ffffff;
+  padding: 2.25rem;
+  border-radius: 20px;
+  border: 1px solid #dfe3ee;
+  box-shadow: 0 18px 30px rgba(15, 23, 42, 0.05);
+  width: min(600px, 100%);
+}
+
+.home-header h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 3vw, 2.8rem);
+  color: #0f172a;
+}
+
+.home-header p {
+  margin: 0.65rem 0 0;
+  color: #475569;
+}
+
+.home-navbar {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0.75rem 1rem;
+  border-radius: 14px;
+  border: 1px solid #dfe3ee;
+  background: #ffffff;
+  box-shadow: 0 12px 25px rgba(15, 23, 42, 0.1);
+}
+
+.home-navbar a {
+  text-decoration: none;
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  background: #0ea5e9;
+  color: white;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.home-navbar a:hover {
+  opacity: 0.85;
+}
+
+.home-copy {
+  width: min(600px, 100%);
+  text-align: center;
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #dfe3ee;
+  padding: 1.5rem 1.75rem;
+  color: #0f172a;
+}
+
+.home-copy p {
+  margin: 0 0 1rem;
+  line-height: 1.6;
+}
+
+.home-cta {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.cta {
+  padding: 0.75rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  background: #111827;
+}
+
+.cta.ghost {
+  background: transparent;
+  color: #0f172a;
+  border: 1px solid #111827;
+}
