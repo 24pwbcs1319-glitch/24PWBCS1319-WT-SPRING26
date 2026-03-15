@@ -1,0 +1,41 @@
+
+body{
+    margin:30px;
+    font-family:Arial;
+}
+
+.solid{
+    background-color: lightblue;
+    padding:20px;
+    margin-bottom:20px;
+}
+
+.repeat{
+    background-image:url("https://www.transparenttextures.com/patterns/brick-wall.png");
+    background-repeat:repeat;
+    padding:20px;
+    margin-bottom:20px;
+}
+
+.linear{
+    background: linear-gradient(to right, orange, yellow);
+    padding:20px;
+    margin-bottom:20px;
+}
+
+.radial{
+    background: radial-gradient(circle, lightgreen, darkgreen);
+    padding:20px;
+    color:white;
+    margin-bottom:20px;
+}
+
+.multi{
+    background-image:
+        url("https://www.transparenttextures.com/patterns/diagonal-striped-brick.png"),
+        linear-gradient(to right, blue, purple);
+    background-blend-mode: overlay;
+    padding:20px;
+    color:white;
+}
+

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CSS Transform Gallery</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    background:#f2f4f7;
+    margin:0;
+    text-align:center;
+}
+
+h2{
+    margin-top:30px;
+    color:#333;
+}
+
+.gallery{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+    padding:40px;
+}
+
+.box{
+    width:180px;
+    height:180px;
+    background:white;
+    border-radius:10px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.2);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+    transition:0.4s;
+}
+
+.rotate:hover{
+    transform:rotate(25deg);
+}
+
+.scale:hover{
+    transform:scale(1.3);
+}
+
+.move:hover{
+    transform:translate(20px,-20px);
+}
+
+.threeD{
+    perspective:600px;
+}
+
+.threeD:hover{
+    transform:rotateY(40deg);
+}
+
+.origin{
+    transform-origin: top left;
+}
+
+.origin:hover{
+    transform:rotate(40deg);
+}
+
+.combo:hover{
+    transform:scale(1.2) rotate(15deg) translateY(-10px);
+}
+
+</style>
+</head>
+
+<body>
+
+<h2>CSS Transform Gallery</h2>
+
+<div class="gallery">
+
+<div class="box rotate">Rotate</div>
+
+<div class="box scale">Scale</div>
+
+<div class="box move">Translate</div>
+
+<div class="box threeD">3D Rotate</div>
+
+<div class="box origin">Origin</div>
+
+<div class="box combo">Combined</div>
+
+</div>
+
+</body>
+</html>

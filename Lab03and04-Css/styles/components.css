@@ -1,0 +1,80 @@
+
+h1{
+    color: darkblue;
+}
+
+.highlight{
+    background-color: lightyellow;
+}
+
+#mainBox{
+    border: 2px solid black;
+    padding: 10px;
+}
+
+*{
+    font-family: Arial, sans-serif;
+}
+
+h2, p{
+    margin: 8px;
+}
+
+input[type="text"]{
+    border: 2px solid green;
+}
+
+a[target="_blank"]{
+    color: purple;
+}
+
+img[alt]{
+    border-radius: 8px;
+}
+
+div span{
+    color: red;
+}
+
+ul > li{
+    color: darkgreen;
+}
+
+h2 + p{
+    font-style: italic;
+}
+
+h3 ~ p{
+    background-color: #f3f3f3;
+}
+
+button:hover{
+    background-color: orange;
+}
+
+li:first-child{
+    font-weight: bold;
+}
+
+li:last-child{
+    color: blue;
+}
+
+input:focus{
+    background-color: lightcyan;
+}
+
+a:visited{
+    color: gray;
+}
+
+p::first-letter{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+h2::before{
+    content: "★ ";
+    color: gold;
+}
+

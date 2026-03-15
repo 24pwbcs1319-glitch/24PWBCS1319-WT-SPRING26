@@ -1,0 +1,50 @@
+
+body{
+    font-family: Arial;
+    margin: 40px;
+}
+
+.gallery{
+    display: flex;
+    gap: 25px;
+}
+
+/* Rounded image */
+.rounded img{
+    width: 200px;
+    border-radius: 15px;
+    border: 3px solid #444;
+}
+
+/* Circular image with shadow */
+.circle img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 4px 4px 10px gray;
+}
+
+/* Overlay image */
+.overlayBox{
+    position: relative;
+    width: 200px;
+}
+
+.overlayBox img{
+    width: 100%;
+}
+
+.overlayText{
+    position: absolute;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.overlayBox:hover .overlayText{
+    opacity: 1;
+}
