@@ -1,0 +1,34 @@
+
+      body {
+        margin: 40px;
+      }
+
+      .title {
+        font-family: "Lobster", cursive;
+        font-size: 40px;
+        text-align: center;
+      }
+
+      .text1 {
+        font-family: "Roboto", sans-serif;
+        font-size: 18px;
+        text-align: left;
+      }
+
+      .text2 {
+        font-family: "Source Code Pro", monospace;
+        font-size: 1.5em;
+      }
+
+      .decorate {
+        text-decoration: underline;
+      }
+
+      .transform {
+        text-transform: uppercase;
+      }
+
+      .shadow {
+        font-size: 30px;
+        text-shadow: 2px 2px 4px gray;
+      }

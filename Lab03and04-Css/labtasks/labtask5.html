@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Button Styling Collection</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background-color: #f5f5f5;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.button-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.btn {
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.btn-primary {
+    background: linear-gradient(to right, #007bff, #00aaff);
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+
+.btn-success {
+    background: linear-gradient(to right, #28a745, #26d126);
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+
+.btn-danger {
+    background: linear-gradient(to right, #4adfad, #ff6b6b);
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+
+.btn-pill {
+    border-radius: 50px;
+    background: linear-gradient(to right, #a892be, #2575fc);
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 12px rgba(0,0,0,0.3);
+}
+
+.btn:focus {
+    outline: 2px solid #ffdd57;
+}
+
+.btn-small {
+    padding: 8px 18px;
+    font-size: 14px;
+}
+
+.btn-large {
+    padding: 18px 35px;
+    font-size: 18px;
+}
+
+.btn:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+    box-shadow: none;
+    opacity: 0.7;
+}
+</style>
+</head>
+<body>
+
+<h2>Button Styling Collection</h2>
+
+<div class="button-container">
+    <button class="btn btn-primary btn-small">Primary Small</button>
+    <button class="btn btn-success">Success Normal</button>
+    <button class="btn btn-danger btn-large">Danger Large</button>
+    <button class="btn btn-pill">Pill Button</button>
+    <button class="btn btn-primary" disabled>Disabled Button</button>
+</div>
+
+</body>
+</html>

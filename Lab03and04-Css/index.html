@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Topics</title>
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: #f6f4f0;
+        color: #1c1c1c;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 32px 20px;
+      }
+
+      main {
+        width: min(900px, 100%);
+        background: #fff;
+        padding: 28px;
+        border-radius: 20px;
+        border: 1px solid #e0d7cd;
+        box-shadow: 0 16px 30px rgba(0, 0, 0, 0.08);
+      }
+
+      h1 {
+        margin: 0 0 10px;
+        font-size: 2.2rem;
+      }
+
+      .hero p {
+        margin: 0;
+        color: #5d5b60;
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+
+      .grid {
+        margin-top: 28px;
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        flex: 1 1 230px;
+        padding: 18px;
+        border-radius: 14px;
+        background: #faf6ef;
+        border: 1px solid #ddd3c5;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        transition: transform 0.2s ease;
+      }
+
+      .card h2 {
+        margin: 0;
+        font-size: 1.1rem;
+      }
+
+      .card p {
+        margin: 0;
+        color: #6b6560;
+        font-size: 0.95rem;
+      }
+
+      .card a {
+        margin-top: auto;
+        color: #1a7ce0;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .card:hover {
+        transform: translateY(-4px);
+      }
+
+      @media (max-width: 600px) {
+        body {
+          padding: 24px 12px;
+        }
+
+        .grid {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="hero">
+        <h1>Web Technology Lab 03 and 04</h1>
+        <p class="lead">
+          A collection of exercises, challenges, and experimental layouts
+          crafted to keep CSS skills agile. Browse, practice, and enjoy.
+        </p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <h2>Exercises</h2>
+          <p>
+            Every sample here is handcrafted for clarity: see typography,
+            backgrounds, button states, and more in a single scroll.
+          </p>
+          <a href="exercises/index..html">View Exercises</a>
+        </article>
+        <article class="card">
+          <h2>Labtasks</h2>
+          <p>
+            Structured learnings that walk through visual composition,
+            transforms, and responsive behavior for real-world patterns.
+          </p>
+          <a href="labtasks/index.html">View labtasks</a>
+        </article>
+      </div>
+    </main>
+  </body>
+</html>
