@@ -1,0 +1,10 @@
+.responsive-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+@media (min-width: 640px) {
+  .responsive-stack {
+    flex-direction: row;
+  }
+}

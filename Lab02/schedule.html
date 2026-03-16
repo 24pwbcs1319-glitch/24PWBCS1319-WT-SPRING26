@@ -1,39 +1,69 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
-    <title>Course Schedule</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spring 2026 Schedule</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <header>
-      <h2>Weekly Course Schedule</h2>
-    </header>
+  <body class="schedule-page">
+    <main class="schedule-shell">
+      <header class="schedule-header">
+        <p class="eyebrow">BS Computer Science · Section B</p>
+        <h1>My Spring 2026 Schedule</h1>
+        <p class="subhead">Spring 2026 · 4th Semester · University of Engineering & Technology Peshawar</p>
+      </header>
 
-    <table border="1">
-      <tr>
-        <th>Time</th>
-        <th>Monday</th>
-        <th>Tuesday</th>
-        <th>Wednesday</th>
-        <th>Thursday</th>
-        <th>Friday</th>
-      </tr>
+      <div class="schedule-table-wrapper">
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Monday</th>
+              <th>Tuesday</th>
+              <th>Wednesday</th>
+              <th>Thursday</th>
+              <th>Friday</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>08:00 - 08:50</td>
+              <td>Introduction to Data Science (T)</td>
+              <td>Linear Algebra</td>
+              <td>Operating Systems (L)</td>
+              <td>Artificial Intelligence (T)</td>
+              <td>Quran Tarjuma & Tafseer</td>
+            </tr>
+            <tr>
+              <td>10:30 - 11:20</td>
+              <td>Web Technologies (L)</td>
+              <td>Applied Physics</td>
+              <td>Web Technologies (L)</td>
+              <td>Introduction to Data Science (L)</td>
+              <td>Web Technologies (T)</td>
+            </tr>
+            <tr>
+              <td>12:10 - 13:00</td>
+              <td colspan="5">Lunch / Nimaz Break</td>
+            </tr>
+            <tr>
+              <td>13:30 - 14:20</td>
+              <td>Artificial Intelligence (T)</td>
+              <td>Introduction to Data Science (T)</td>
+              <td>Applied Physics Consultation</td>
+              <td>Web Technologies (T)</td>
+              <td>Operating Systems Support</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-      <tr>
-        <td>9-10</td>
-        <td>Web Tech</td>
-        <td>DBMS</td>
-        <td>Web Tech</td>
-        <td>OS</td>
-        <td>Free</td>
-      </tr>
+      <div class="schedule-note">
+        <p>Web Technologies classes include both the practical (L) and theory (T) sections; all lab links stay here for quick reference.</p>
+      </div>
 
-      <tr>
-        <td>1-2</td>
-        <td colspan="5">Lunch Break</td>
-      </tr>
-    </table>
-
-    <a href="index.html">Back to Home</a>
+      <a class="home-link" href="index.html">Back to Home</a>
+    </main>
   </body>
 </html>
