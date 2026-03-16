@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Grid Exercises</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 32px;
+      background: #f5f7fb;
+      color: #1d2333;
+    }
+
+    h1 {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .grid-demo {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .grid-item {
+      background: white;
+      padding: 18px;
+      border-radius: 14px;
+      border: 1px solid rgba(17, 19, 34, 0.12);
+    }
+
+    .grid-item:nth-child(odd) {
+      background: #e7f2ff;
+    }
+
+    .grid-stack {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .grid-stack div {
+      background: #fff;
+      padding: 12px;
+      text-align: center;
+      border-radius: 10px;
+      border: 1px solid rgba(17, 19, 34, 0.1);
+    }
+
+    .wide {
+      grid-column: span 2;
+    }
+
+    @media (max-width: 900px) {
+      .grid-demo {
+        grid-template-columns: 1fr;
+      }
+
+      .grid-stack {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 600px) {
+      .grid-stack {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Grid Exercises</h1>
+  <div class="grid-demo">
+    <div class="grid-item">Simple 2-column grid with even gaps.</div>
+    <div class="grid-item">Set minmax to keep columns flexible.</div>
+    <div class="grid-item wide">Use <code>grid-column: span 2</code> to stretch across.</div>
+  </div>
+
+  <div class="grid-stack">
+    <div>Item 1</div>
+    <div>Item 2</div>
+    <div>Item 3</div>
+    <div>Item 4</div>
+    <div>Item 5</div>
+    <div>Item 6</div>
+  </div>
+</body>
+</html>

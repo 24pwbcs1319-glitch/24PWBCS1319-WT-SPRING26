@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Breakpoint Examples</title>
+  <style>
+    :root {
+      --ink: #111322;
+      --sand: #fdf6ed;
+      --mint: #b6f7d7;
+      --sky: #d9ecff;
+      --gold: #ffc857;
+      --border: rgba(17, 19, 34, 0.15);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', 'Segoe UI', sans-serif;
+      background: var(--sand);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px 16px 36px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .note {
+      font-size: 0.9rem;
+      color: #5b6276;
+      margin-bottom: 20px;
+    }
+
+    .breakpoint-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 16px 18px;
+      border: 1px solid var(--border);
+      box-shadow: 0 12px 30px rgba(17, 19, 34, 0.08);
+    }
+
+    .card strong {
+      display: block;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.85rem;
+    }
+
+    .card p {
+      margin: 0;
+    }
+
+    .status {
+      margin-top: 8px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--sky);
+      display: inline-block;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+    }
+
+    /* Tablet (768px and up) */
+    @media (min-width: 768px) {
+      body {
+        background: #f2faff;
+      }
+
+      .breakpoint-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .card {
+        padding: 20px 22px;
+      }
+    }
+
+    /* Small Desktop (1024px and up) */
+    @media (min-width: 1024px) {
+      body {
+        background: #f6fff4;
+      }
+
+      .breakpoint-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .status {
+        background: var(--mint);
+      }
+    }
+
+    /* Large Desktop (1200px and up) */
+    @media (min-width: 1200px) {
+      body {
+        background: #fff8ec;
+      }
+
+      .breakpoint-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .card {
+        padding: 24px 26px;
+      }
+    }
+
+    /* Extra Large (1400px and up) */
+    @media (min-width: 1400px) {
+      body {
+        background: #fdf9f2;
+      }
+
+      .card {
+        border-color: var(--gold);
+        box-shadow: 0 16px 35px rgba(255, 200, 87, 0.25);
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>Common Breakpoints</h1>
+    <p class="note">Mobile-first base styles apply to all screens (0–767px). Each media query above tweaks background, grid columns, and card styling to reflect the named breakpoint.</p>
+    <div class="breakpoint-grid">
+      <article class="card">
+        <strong>Base (0px–767px)</strong>
+        <p>Mobile styles render this single column grid with the default sand background.</p>
+        <span class="status">Active</span>
+      </article>
+      <article class="card">
+        <strong>Tablet (768px+)</strong>
+        <p>Switches to two columns and a subtle blue background to signal a wider screen.</p>
+        <span class="status">Pending</span>
+      </article>
+      <article class="card">
+        <strong>Small Desktop (1024px+)</strong>
+        <p>Three column grid and mint status to highlight desktop adjustments.</p>
+        <span class="status">Pending</span>
+      </article>
+      <article class="card">
+        <strong>Large Desktop (1200px+)</strong>
+        <p>Four column grid plus extra padding for larger screens.</p>
+        <span class="status">Pending</span>
+      </article>
+      <article class="card">
+        <strong>Extra Large (1400px+)</strong>
+        <p>Refreshes background and accent colors to show the final breakpoint.</p>
+        <span class="status">Pending</span>
+      </article>
+    </div>
+  </div>
+</body>
+</html>
