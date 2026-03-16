@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Flex Card Layout</title>
+  <style>
+    :root {
+      --coal: #141416;
+      --peach: #ffdcb0;
+      --blush: #ffeef4;
+      --sage: #d9f7ee;
+      --border: rgba(20, 20, 22, 0.15);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', 'Segoe UI', sans-serif;
+      background: #f4f5f7;
+      color: var(--coal);
+      padding: 32px 16px 48px;
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin-bottom: 16px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      color: var(--coal);
+    }
+
+    .card-grid {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      flex: 1 1 280px;
+      background: white;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      min-height: 320px;
+      box-shadow: 0 10px 25px rgba(20, 20, 22, 0.08);
+    }
+
+    .card h2 {
+      margin: 0 0 12px;
+      font-size: 1.2rem;
+      color: var(--coal);
+    }
+
+    .card p {
+      flex: 1;
+      margin: 0 0 16px;
+      line-height: 1.6;
+      color: #3a3b45;
+    }
+
+    .card .tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+
+    .card .tag {
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      background: var(--sage);
+      color: var(--coal);
+      border: 1px solid rgba(217, 247, 238, 0.8);
+    }
+
+    .card .actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: auto;
+    }
+
+    .card button {
+      border: none;
+      border-radius: 999px;
+      padding: 10px 18px;
+      font-weight: 600;
+      background: var(--peach);
+      color: var(--coal);
+      cursor: pointer;
+      box-shadow: 0 6px 16px rgba(255, 220, 176, 0.5);
+      transition: transform 150ms ease;
+    }
+
+    .card button:hover {
+      transform: translateY(-2px);
+    }
+
+    .card small {
+      color: #717381;
+    }
+
+    @media (min-width: 900px) {
+      .card {
+        flex: 1 1 calc(33.333% - 16px);
+      }
+    }
+
+    @media (min-width: 640px) and (max-width: 899px) {
+      .card {
+        flex: 1 1 calc(50% - 16px);
+      }
+    }
+
+    @media (max-width: 639px) {
+      .card {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>Flex Card Layout</h1>
+    <div class="card-grid">
+      <article class="card">
+        <h2>Ocean Research</h2>
+        <p>
+          A short description explaining how this card keeps its height in sync with the others, thanks to the flex column making the <code>p</code> expand.
+        </p>
+        <div class="tags">
+          <span class="tag">Science</span>
+          <span class="tag">Explore</span>
+        </div>
+        <div class="actions">
+          <button>Read</button>
+          <small>Updated 2 hours ago</small>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>Artisan Studio</h2>
+        <p>
+          Here is slightly more text to show that even with longer copy the cards stay equal height because each stretches to fill the flex container.
+        </p>
+        <div class="tags">
+          <span class="tag">Design</span>
+          <span class="tag">Studio</span>
+        </div>
+        <div class="actions">
+          <button>Explore</button>
+          <small>New</small>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>Trail Notes</h2>
+        <p>
+          Shorter text, same height, thanks to flex. Actions always stick at the bottom for consistent alignment across the grid.
+        </p>
+        <div class="tags">
+          <span class="tag">Nature</span>
+          <span class="tag">Journal</span>
+        </div>
+        <div class="actions">
+          <button>Save</button>
+          <small>Trending</small>
+        </div>
+      </article>
+    </div>
+  </div>
+</body>
+</html>

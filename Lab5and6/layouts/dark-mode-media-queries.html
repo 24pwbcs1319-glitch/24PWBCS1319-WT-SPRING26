@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Media Query Demo</title>
+  <style>
+    :root {
+      --ink: #14213d;
+      --sky: #f0f5ff;
+      --accent: #ffb703;
+      --stone: #ced4da;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', 'Segoe UI', sans-serif;
+      background: var(--sky);
+      color: var(--ink);
+      padding: 32px 16px 48px;
+      font-size: 16px;
+    }
+
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+      background: white;
+      padding: 24px 28px 36px;
+      border-radius: 20px;
+      border: 1px solid rgba(20, 33, 61, 0.08);
+      box-shadow: 0 12px 30px rgba(20, 33, 61, 0.08);
+    }
+
+    h1 {
+      margin-top: 0;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      color: var(--ink);
+    }
+
+    section {
+      margin-top: 24px;
+    }
+
+    section h2 {
+      margin: 0;
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    p {
+      margin: 10px 0 0;
+      line-height: 1.6;
+    }
+
+    .indicator {
+      margin-top: 16px;
+      padding: 12px 14px;
+      border: 1px dashed var(--stone);
+      border-radius: 12px;
+      background: #fffdf8;
+      font-weight: 600;
+    }
+
+    .indicator span {
+      color: var(--ink);
+      margin-left: 6px;
+    }
+
+    .bp {
+      display: none;
+    }
+
+    .layout-demo {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 14px;
+    }
+
+    .layout-demo .panel {
+      background: #f8fbff;
+      border-radius: 14px;
+      padding: 16px;
+      border: 1px solid var(--stone);
+    }
+
+    .layout-demo .panel img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .typography-demo {
+      margin-top: 14px;
+      padding: 16px;
+      border-radius: 12px;
+      border: 1px solid var(--stone);
+      background: var(--sky);
+    }
+
+    .typography-demo small {
+      color: #6c7b91;
+    }
+
+    .nav-demo {
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .nav-demo a {
+      text-decoration: none;
+      color: var(--ink);
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 1px solid var(--stone);
+      background: white;
+      font-weight: 500;
+    }
+
+    @media (max-width: 1024px) {
+      .bp-desktop {
+        display: none;
+      }
+
+      .bp-tablet {
+        display: inline;
+      }
+
+      .layout-demo {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      body {
+        font-size: 15px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .bp-tablet {
+        display: none;
+      }
+
+      .bp-mobile {
+        display: inline;
+      }
+
+      .layout-demo {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-demo {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .nav-demo a {
+        width: 100%;
+      }
+
+      body {
+        font-size: 14px;
+      }
+    }
+
+    /* default for desktop indicator */
+    .bp-desktop {
+      display: inline;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>Media Query Demo</h1>
+
+    <section>
+      <h2>Breakpoint Indicator</h2>
+      <p>Resize the window to see which range is active.</p>
+      <div class="indicator">
+        Current breakpoint:<span class="bp bp-desktop">Desktop (1025px+)</span><span class="bp bp-tablet">Tablet (721–1024px)</span><span class="bp bp-mobile">Mobile (≤720px)</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Layout Changes</h2>
+      <p>The content cards move from two columns to one column on phones.</p>
+      <div class="layout-demo">
+        <div class="panel">
+          <strong>Panel A</strong>
+          <p>This panel sits in the grid and stretches with the breakpoint.</p>
+          <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=600&q=60" alt="tile" />
+        </div>
+        <div class="panel">
+          <strong>Panel B</strong>
+          <p>Smaller screens collapse the grid to a single column for readability.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Typography Scaling</h2>
+      <p>The base font size shrinks gradually as the viewport narrows.</p>
+      <div class="typography-demo">
+        <p style="margin:0;">Current body font size is based on the active media query. On mobile it drops to 14px so more copy fits.</p>
+        <small>Try your browser inspector to confirm the size.</small>
+      </div>
+    </section>
+
+    <section>
+      <h2>Navigation</h2>
+      <p>The nav links start inline but stack vertically on small screens.</p>
+      <div class="nav-demo">
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Pricing</a>
+        <a href="#">Contact</a>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Responsive Table</title>
+  <style>
+    :root {
+      --ink: #111322;
+      --sand: #fefefe;
+      --sky: #e0f2ff;
+      --border: rgba(17, 19, 34, 0.15);
+    }
+
+    * { box-sizing:border-box; }
+
+    body {
+      margin:0;
+      font-family:'Segoe UI','Inter',sans-serif;
+      background:#f4f6fb;
+      padding:32px 16px 48px;
+      color:var(--ink);
+    }
+
+    .page {
+      max-width:1100px;
+      margin:0 auto;
+    }
+
+    h1 {
+      text-transform:uppercase;
+      letter-spacing:0.2em;
+      margin-bottom:16px;
+    }
+
+    table {
+      width:100%;
+      border-collapse:collapse;
+      background:var(--sand);
+      border:1px solid var(--border);
+    }
+
+    th,td {
+      padding:12px 14px;
+      text-align:left;
+      border-bottom:1px solid var(--border);
+    }
+
+    th {
+      background:#f0f6ff;
+      font-size:0.9rem;
+      letter-spacing:0.1em;
+      text-transform:uppercase;
+    }
+
+    caption {
+      margin-bottom:12px;
+      font-style:italic;
+      color:#5b6276;
+    }
+
+    .card-grid {
+      display:none;
+      gap:16px;
+    }
+
+    .card {
+      background:white;
+      border-radius:12px;
+      padding:16px;
+      border:1px solid var(--border);
+      box-shadow:0 10px 25px rgba(17,19,34,0.05);
+    }
+
+    .card h3 {
+      margin:0 0 6px;
+      font-size:1rem;
+      letter-spacing:0.1em;
+      text-transform:uppercase;
+    }
+
+    .card p {
+      margin:4px 0;
+      font-size:0.95rem;
+    }
+
+    @media (max-width: 960px) {
+      table { display:none; }
+      .card-grid {
+        display:grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>Reports</h1>
+    <table aria-label="Monthly coverage stats">
+      <caption>Desktop view shows the full table</caption>
+      <thead>
+        <tr>
+          <th scope="col">Campaign</th>
+          <th scope="col">Reach</th>
+          <th scope="col">Clicks</th>
+          <th scope="col">Conversion</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Spring Drop</td>
+          <td>120K</td>
+          <td>4,200</td>
+          <td>3.5%</td>
+        </tr>
+        <tr>
+          <td>Weekend Series</td>
+          <td>85K</td>
+          <td>3,100</td>
+          <td>3.0%</td>
+        </tr>
+        <tr>
+          <td>Night Owl</td>
+          <td>63K</td>
+          <td>1,900</td>
+          <td>2.8%</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="card-grid" aria-live="polite">
+      <article class="card">
+        <h3>Spring Drop</h3>
+        <p><strong>Reach:</strong> 120K</p>
+        <p><strong>Clicks:</strong> 4,200</p>
+        <p><strong>Conversion:</strong> 3.5%</p>
+      </article>
+      <article class="card">
+        <h3>Weekend Series</h3>
+        <p><strong>Reach:</strong> 85K</p>
+        <p><strong>Clicks:</strong> 3,100</p>
+        <p><strong>Conversion:</strong> 3.0%</p>
+      </article>
+      <article class="card">
+        <h3>Night Owl</h3>
+        <p><strong>Reach:</strong> 63K</p>
+        <p><strong>Clicks:</strong> 1,900</p>
+        <p><strong>Conversion:</strong> 2.8%</p>
+      </article>
+    </div>
+  </div>
+</body>
+</html>

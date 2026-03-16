@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Float-Based Magazine Layout</title>
+<link rel="stylesheet" href="/styles/float.css">
+</head>
+<body>
+  <div class="page">
+    <h1>Float-Based Magazine</h1>
+
+    <div class="magazine clearfix">
+      <div class="mag-main">
+        <span class="mag-image" aria-hidden="true"></span>
+        <div class="mag-columns clearfix">
+          <div class="mag-column">
+            <strong>Column focus</strong> – Floating columns lets text flow in a multi-column layout just like a magazine spread. Use consistent widths (e.g., 48%) and gutters to maintain rhythm.
+          </div>
+          <div class="mag-column">
+            <strong>Column two</strong> – The content stays balanced because both pieces float next to each other, and the parent clears them with the helper class.
+          </div>
+        </div>
+        <p class="mag-space">
+          Images float inside the text block to produce classic wrap-around copy. On desktop the picture anchors the paragraph, and on mobile it centers above the content.
+        </p>
+      </div>
+
+      <aside class="mag-sidebar">
+        <h3>Sidebar</h3>
+        <p>Float the sidebar right so the main article still takes the spotlight.</p>
+        <ul>
+          <li>Latest stories</li>
+          <li>Trending interviews</li>
+          <li>Behind the scenes</li>
+        </ul>
+        <p>Responsive behavior shifts the sidebar below the article on small screens while still keeping the float-based structure on larger viewports.</p>
+      </aside>
+    </div>
+
+    <div class="mag-footer">
+      <strong>Responsive note:</strong> the float rules fold gracefully with media queries, stacking each block vertically when the viewport shrinks so the magazine remains readable on any device.
+    </div>
+  </div>
+</body>
+</html>
